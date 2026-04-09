@@ -10,20 +10,20 @@ export function ProjectsSection({ onBack }: ProjectsSectionProps) {
     {
       title: "Chorus",
       description: "A music based dating app that allows users to express their music taste to potential matches. From showing your favourite artists, genres, making personal playlists, sending songs or nearby concerts to the people you matched with, Chorus tries to make the dating landscape upbeat (haha)!",
-      tech: ["React", "Expo", "Typescript", "Python", "Flask", "Firebase"],
+      tech: ["React", "Expo", "TypeScript", "Python", "Flask", "Firebase"],
       link: "https://www.tiktok.com/@chorusdating/video/7548118287540866312"
     },
     {
-      title: "VinylVault",
-      description: "Digital cataloging system for vinyl collectors with barcode scanning and Discogs integration.",
-      tech: ["React Native", "Firebase", "Python"],
-      link: "#"
+      title: "Easmail",
+      description: "An email automation app that takes the user's voice prompt to generate professional emails",
+      tech: ["Next.js", "SQLite", "Python", "FastAPI", "TypeScript"],
+      link: "https://github.com/huaanth/easmail"
     },
     {
-      title: "BeatBox",
-      description: "Browser-based drum machine with sample library and pattern sequencer.",
-      tech: ["TypeScript", "Web Audio API", "Canvas"],
-      link: "#"
+      title: "Genre Classifier",
+      description: "An ML project that compares different ML algorithms and a neural network to see how well they do in classifying music genres",
+      tech: ["Python", "Neural Network", "KNN", "SVC"],
+      link: "https://github.com/huaanth/GenreClassification"
     }
   ];
 
@@ -44,7 +44,7 @@ export function ProjectsSection({ onBack }: ProjectsSectionProps) {
       </button>
 
       <div className="max-w-5xl">
-        <h1 className="text-7xl mb-16" style={{ fontFamily: "'Playfair Display', serif" }}>Projects</h1>
+        <h1 className="text-7xl mb-16" style={{ fontFamily: "'Raleway', sans-serif" }}>Projects</h1>
 
         <div className="space-y-12">
           {projects.map((project, index) => (
@@ -56,7 +56,7 @@ export function ProjectsSection({ onBack }: ProjectsSectionProps) {
               className="border-b border-black/10 pb-12"
             >
               <div className="flex items-start justify-between mb-4">
-                <h2 className="text-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>{project.title}</h2>
+                <h2 className="text-4xl" style={{ fontFamily: "'Raleway', sans-serif" }}>{project.title}</h2>
                 <a
                   href={project.link}
                   className="text-black/70 hover:text-black transition-colors"

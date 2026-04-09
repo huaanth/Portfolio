@@ -4,7 +4,6 @@ import { VinylRecord } from "./components/VinylRecord";
 import { ContactBar } from "./components/ContactBar";
 import { AboutSection } from "./components/AboutSection";
 import { ProjectsSection } from "./components/ProjectsSection";
-import { ResumeSection } from "./components/ResumeSection";
 import imgAnthony from "../imports/Group7/f93e7825f2780720cdd98d5b30cb674cf353e960.png";
 import imgAboutCover from "../imports/Group7/4a7896e17bf3c58d9e56b2190996bbc2c026b44e.png";
 import imgProjectsCover from "../imports/Group7/7914ecdeb204281078ab4574e32f698144167a51.png";
@@ -14,6 +13,8 @@ type Section = "home" | "about" | "projects" | "resume";
 
 export default function App() {
   const [currentSection, setCurrentSection] = useState<Section>("home");
+  const RESUME_URL =
+  "https://drive.google.com/file/d/1q7tVkPGJaF3isIAtyKb_DkKywyWQLJOP/view?usp=sharing";
 
   const renderSection = () => {
     switch (currentSection) {
@@ -21,8 +22,6 @@ export default function App() {
         return <AboutSection onBack={() => setCurrentSection("home")} />;
       case "projects":
         return <ProjectsSection onBack={() => setCurrentSection("home")} />;
-      case "resume":
-        return <ResumeSection onBack={() => setCurrentSection("home")} />;
       default:
         return (
           <div
@@ -34,7 +33,7 @@ export default function App() {
           >
             {/* Header - Anthony's Identity */}
             <div className="absolute top-16 left-16 z-10">
-              <h1 className="text-8xl mb-8 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h1 className="text-8xl mb-8 leading-tight" style={{ fontFamily: "'Raleway', sans-serif" }}>
                 Hi, I'm<br />Anthony
               </h1>
               <div className="w-[280px] h-[400px] overflow-hidden shadow-2xl">
@@ -68,7 +67,9 @@ export default function App() {
               albumCover={imgResumeCover}
               rotation={-5}
               position={{ top: "60%", left: "32%" }}
-              onClick={() => setCurrentSection("resume")}
+              onClick={() => {
+                window.open(RESUME_URL, "_blank", "noopener,noreferrer");
+              }}
             />
 
             {/* Contact Bar */}

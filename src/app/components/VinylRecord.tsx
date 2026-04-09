@@ -29,7 +29,7 @@ export function VinylRecord({ title, albumCover, rotation, position, onClick }: 
       <div className="relative w-[340px] h-[300px]">
         {/* Title above vinyl */}
         <div className="absolute -top-12 left-0 w-full text-center">
-          <p className="text-xl text-black/80" style={{ fontFamily: "'Playfair Display', serif" }}>{title}</p>
+          <p className="text-xl text-black/80" style={{ fontFamily: "'Raleway', sans-serif" }}>{title}</p>
         </div>
 
         {/* Vinyl Record - positioned to peek out from the left */}
