@@ -4,6 +4,7 @@ import { VinylRecord } from "./components/VinylRecord";
 import { ContactBar } from "./components/ContactBar";
 import { AboutSection } from "./components/AboutSection";
 import { ProjectsSection } from "./components/ProjectsSection";
+import { DrumKit } from "./components/DrumKit";
 import imgAnthony from "../imports/Group7/f93e7825f2780720cdd98d5b30cb674cf353e960.png";
 import imgAboutCover from "../imports/Group7/4a7896e17bf3c58d9e56b2190996bbc2c026b44e.png";
 import imgProjectsCover from "../imports/Group7/7914ecdeb204281078ab4574e32f698144167a51.png";
@@ -126,6 +127,16 @@ export default function App() {
             </div>
 
             {/* Contact Bar — always visible */}
+            <div className="hidden lg:block">
+            <DrumKit layout="corner" />
+            </div>
+
+            {/* Mobile/tablet: below the vinyl flex column */}
+            <div className="lg:hidden">
+              {/* ...your existing mobile vinyl flex column... */}
+              <DrumKit layout="inline" />
+            </div>
+
             <ContactBar />
           </div>
         );
