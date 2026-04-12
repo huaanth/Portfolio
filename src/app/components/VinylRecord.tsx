@@ -34,7 +34,7 @@ export function VinylRecord({ title, albumCover, rotation, position, onClick }: 
           sm      : w-[280px] h-[248px]  (≈ 82%)
           lg      : w-[340px] h-[300px]  (original)
       */}
-            {/* /* In VinylRecord.tsx, update the container and all sized elements: */ */}
+            {/* In VinylRecord.tsx, update the container and all sized elements: */ }
 
       {/* // Container */}
       <div className="relative w-[220px] h-[195px] sm:w-[280px] sm:h-[248px] lg:w-[300px] lg:h-[265px] xl:w-[370px] xl:h-[328px] 2xl:w-[440px] 2xl:h-[390px]">
