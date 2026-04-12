@@ -60,24 +60,41 @@ export default function App() {
               {/* ── DESKTOP layout (≥ lg) ── */}
               <div className="hidden lg:block w-full min-h-screen">
                 <div className="relative mx-auto min-h-screen" style={{ maxWidth: "1280px" }}>
-                  <div className="absolute top-16 left-16 z-10">
-                    <h1
-                      className="text-8xl mb-8 leading-tight"
-                      style={{ fontFamily: "'Raleway', sans-serif" }}
-                    >
-                      Hi, I'm
-                      <br />
-                      Anthony
-                    </h1>
-                    <div className="w-[280px] h-[400px] overflow-hidden shadow-2xl">
-                      <img src={imgAnthony} alt="Anthony" className="w-full h-full object-cover" />
-                    </div>
+                <div className="absolute top-16 left-16 z-10">
+                  <h1
+                    className="text-7xl xl:text-8xl 2xl:text-9xl mb-8 leading-tight"
+                    style={{ fontFamily: "'Raleway', sans-serif" }}
+                  >
+                    Hi, I'm
+                    <br />
+                    Anthony
+                  </h1>
+                  <div className="w-[280px] xl:w-[320px] 2xl:w-[380px] h-[400px] xl:h-[460px] 2xl:h-[540px] overflow-hidden shadow-2xl">
+                    <img src={imgAnthony} alt="Anthony" className="w-full h-full object-cover" />
                   </div>
+                </div>
         
-                  <VinylRecord title="About Me" albumCover={imgAboutCover} rotation={-10} position={{ top: "15%", left: "45%" }} onClick={() => setCurrentSection("about")} />
-                  <VinylRecord title="Projects" albumCover={imgProjectsCover} rotation={5} position={{ top: "52%", left: "65%" }} onClick={() => setCurrentSection("projects")} />
-                  <VinylRecord title="Resume" albumCover={imgResumeCover} rotation={-5} position={{ top: "60%", left: "32%" }} onClick={() => window.open(RESUME_URL, "_blank", "noopener,noreferrer")} />
-        
+                <VinylRecord
+                  title="About Me"
+                  albumCover={imgAboutCover}
+                  rotation={-10}
+                  position={{ top: "15%", left: "45%" }}
+                  onClick={() => setCurrentSection("about")}
+                />
+                <VinylRecord
+                  title="Projects"
+                  albumCover={imgProjectsCover}
+                  rotation={5}
+                  position={{ top: "52%", left: "65%" }}
+                  onClick={() => setCurrentSection("projects")}
+                />
+                <VinylRecord
+                  title="Resume"
+                  albumCover={imgResumeCover}
+                  rotation={-5}
+                  position={{ top: "60%", left: "32%" }}
+                  onClick={() => window.open(RESUME_URL, "_blank", "noopener,noreferrer")}
+                />
                   <DrumKit layout="corner" />
                 </div>
               </div>
