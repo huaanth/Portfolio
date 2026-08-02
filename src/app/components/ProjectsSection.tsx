@@ -59,7 +59,7 @@ const projects: Project[] = [
     ],
     tech: ["Go", "gopsutil/v3", "HTTP"],
     images: [imgObsAgent],
-    link: "https://github.com/huaanth/Mini-Observability-Agent",
+    link: "https://github.com/huaanth/Mini-Observability-Agent-",
   },
   {
     title: "Genre Classifier",
